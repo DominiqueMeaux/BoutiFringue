@@ -56,6 +56,11 @@
 
 <main role="main">
 
+    <!-- ------------------ Carousel --------------------- -->
+    
+    <!-- Si mon block carousel est défini tu l'affiche -->
+    {% if block('carousel') is defined %}
+        
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -103,14 +108,16 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    {% endif %}
 
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
    
 
-    <div class="container marketing">
-
+         <!-- Si le block carousel n'est pas défini alors tu mets un margin-top 5 -->
+    <div class="container marketing {% if block('carousel') is not defined %}mt-5{% endif %}">
+       
         {% block content %}
             
         {% endblock %}
