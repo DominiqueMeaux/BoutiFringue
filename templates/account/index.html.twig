@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte - BoutiFringue{% endblock %}
+
+{% block content %}
+    <h1>Mon compte</h1>
+    <p>Bienvenue dans votre compte {{app.user.firstname}}. C'est dans cette espace que vous allez pouvoir gérer toutes vos inforations personnelles.</p>
+    {# {{ dump(app.user.firstname)}} #}
+    <a href="{{ path('account_password')}}">Modifier le mot de passe</a>
+{% endblock %}

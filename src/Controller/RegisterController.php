@@ -16,10 +16,19 @@ class RegisterController extends AbstractController
 
     private $entityManager;
 
+    /**
+     * Initialisation du constructeur
+     *
+     * @param \Doctrine\ORM\EntityManagerInterface $entityManager
+     */
     public function __construct(EntityManagerInterface $entityManager){
         $this->entityManager = $entityManager;
     }
     /**
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @param \Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface $encoder
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/inscription", name="register")
      */
     public function index(Request $request, UserPasswordEncoderInterface $encoder): Response

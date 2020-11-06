@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -36,11 +37,25 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 30,
+     *      minMessage = "Votre prénom doit contenir un minimum de {{ limit }} characters ",
+     *      maxMessage = "Votre prénom doit contenir un maximum de {{ limit }} characters ",
+     *      allowEmptyString = false
+     * )
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 30,
+     *      minMessage = "Votre nom doit contenir un minimum de {{ limit }} characters ",
+     *      maxMessage = "Votre nom doit contenir un maximum de {{ limit }} characters ",
+     *      allowEmptyString = false
+     * )
      */
     private $lastname;
 
