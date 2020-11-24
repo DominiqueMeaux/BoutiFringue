@@ -98,6 +98,13 @@ class User implements UserInterface
         return array_unique($roles);
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param array $roles
+     *
+     * @return self
+     */
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
@@ -125,6 +132,7 @@ class User implements UserInterface
      */
     public function getSalt()
     {
+        return null;
         // not needed when using the "bcrypt" algorithm in security.yaml
     }
 

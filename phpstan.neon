@@ -1,0 +1,5 @@
+parameters:
+    excludes_analyse:
+        - src/migration/*
+    doctrine:
+        objectManagerLoader: tests/phpstan/manager.php

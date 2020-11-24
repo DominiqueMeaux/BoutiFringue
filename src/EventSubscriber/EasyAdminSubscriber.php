@@ -28,7 +28,7 @@ class EasyAdminSubscriber implements EventSubscriberInterface
     /**
      * Définir a quel event se que l on est en train de créer réponde
      *
-     * @return void
+     * @return array[]
      */
     public static function getSubscribedEvents()
     {
@@ -42,7 +42,7 @@ class EasyAdminSubscriber implements EventSubscriberInterface
     /**
      * Undocumented function
      *
-     * @param [type] $event
+     * @param $event
      *
      * @return void
      */

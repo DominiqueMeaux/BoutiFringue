@@ -3,14 +3,16 @@
     padding: 0;
 }
 
+body{
+    position: relative;
+}
 .navbar-item-custom, .navbar-item-custom a{
     color: #fff;
 }
 
 .footer-custom{
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
     width: 100%;
     background-color: #dfeaff;
     padding-top: 25px;
@@ -24,8 +26,26 @@
     margin-bottom: 1px;
 }
 
-.product-item span{
+.product-item .product-subtitle{
     font-size: 0.9rem;
     display: block;
-    
+    margin-bottom: 10px;
+}
+.product-item .product-price{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product-container{
+    margin-bottom: 150px;
+}
+
+.product-page-price{
+    font-size: 1.2rem;
+}
+
+/* Le panier */
+
+.cart-icon{
+    height: 20px;
 }

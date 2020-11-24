@@ -60,6 +60,14 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         return $credentials;
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param $credentials
+     * @param \Symfony\Component\Security\Core\User\UserProviderInterface $userProvider
+     *
+     * @return void
+     */
     public function getUser($credentials, UserProviderInterface $userProvider)
     {
         $token = new CsrfToken('authenticate', $credentials['csrf_token']);
